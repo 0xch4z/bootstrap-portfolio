@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand');
+
+/*
+ * Global Styles
+ */
+
+* {
+    font-family: 'Open Sans', arial, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, li > a {
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, sans-serif;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+p > img {
+    width: calc(100% - 10px);
+    margin: 10px;
+}
+
+/*
+ * Helper Styles
+ */
+
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+ * Nav Styles
+ */
+
+header > nav {
+    background: #01579b !important;
+    padding: 10px 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.nav > li a {
+    color: #fff !important;
+    font-size: 1.1em;
+}
+
+.nav > li a:hover {
+    color: #D0D2D4 !important;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-toggle .icon-bar {
+    height: 3px;
+    background: #fff !important;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    overlay: none;
+    background: none;
+    background-color: transparent !important;
+}
+
+.navbar-toggle .icon-bar:hover {
+    background: #D0D2D4;
+}
+
+#brand {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fff !important;
+    transition: transform 300ms ease-in-out;
+}
+
+#brand:hover {
+    transform: scale(1.03);
+}
+
+
+/*
+ * Main Styles
+ */
+
+main {
+    flex-grow: 1;
+}
+
+/*
+ * Content Styles
+ */
+
+aside, section {
+    height: 100%;
+    width: 100%;
+    padding: 15px 10px;
+}
+
+
+section {
+}
+
+
+/*
+ * Social side bar styles
+ */
+
+#social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#social-container img {
+    height: 50px;
+    margin: 0 2.5px;
+    transition: transform 300ms ease-in;
+}
+
+#social-container img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#social-container img:nth-of-type(2n) {
+    height: 55px;
+}
+
+/*
+ * Project styles
+ */
+#projects {
+    overflow: hidden;
+    margin: 2%;
+}
+
+.project-container {
+    margin: 25px auto;
+    position: relative;
+    height: 200px;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+}
+
+.project-container:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 5px 5px #ccc;
+    cursor: pointer;
+}
+
+.project-container > img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-container > a {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    z-index: 999999;
+    left: 0;
+    padding: 17.5px 0;
+    background-color: #145999;
+}
+
+.project-container > a,
+.project-container > a:visited {
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-container > a:hover {
+    cursor: pointer;
+    background-color: #003B7E;    
+}
+
+.project-container > a:active {
+    background-color: #066661;
+}
+
+.project-container > * {
+    margin: 10px;
+}
+
+/*
+ * Footer Styles
+ */
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    height: 60px;
+    background: #aaa;
+}
+
+footer > p {
+    color: #fff;
+    line-height: 30px;
+}
+
+/*
+ * Form styles
+ */
+form > * {
+    display: block;
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+input[type*="text"],
+input[type*="email"] {
+    height: 35px;
+    font-size: 1em;
+    color: #888;
+    padding-left: 10px;
+    border: solid 1px #ccc;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+label {
+    border: none !important;
+    color: #777;
+    font-weight: 550;
+}
+
+
+/*
+ * Media Queries
+ */
+
+@media screen and (min-width: 500px) {
+
+    p > img {
+        float: left;
+        min-width: 33%;
+        max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
